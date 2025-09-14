@@ -19,6 +19,7 @@ const PORT = process.env.PORT || 9292;
 
 app.use(cors({
   origin: ["https://superpetz.in", "https://superpetz.in"],
+  methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
 }));
 
