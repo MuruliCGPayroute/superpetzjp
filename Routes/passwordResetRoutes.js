@@ -35,7 +35,10 @@ router.post("/request-reset", async (req, res) => {
     const resetLink = `${process.env.CLIENT_URL}/reset-password/${token}`;
 
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      // service: "gmail",
+      host: "mail.gna.live",   // 👈 replace with your domain's mail host
+      port: 465,               // 465 for SSL, 587 for TLS
+      secure: true,            // true for 465, false for 587
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
