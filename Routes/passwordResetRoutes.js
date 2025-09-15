@@ -36,7 +36,7 @@ router.post("/request-reset", async (req, res) => {
 
     const transporter = nodemailer.createTransport({
       // service: "gmail",
-      host: "mail.gna.live",   // 👈 replace with your domain's mail host
+      host: "smtpout.secureserver.net", //"mail.gna.live",   // 👈 replace with your domain's mail host
       port: 465,               // 465 for SSL, 587 for TLS
       secure: true,            // true for 465, false for 587
       auth: {
